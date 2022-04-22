@@ -1,0 +1,11 @@
+                   input{
+                                background-color: yellow
+                             }
+                   div{
+                                border: solid black 1px;
+                                width: 180px;
+                                padding: 4px
+                         }
+                   input{
+                                width: 50px
+                             }

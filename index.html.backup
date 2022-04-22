@@ -1,0 +1,58 @@
+<!DOCTYPE html><html>
+    <head><title></title>
+        <style>
+                   input{
+                                background-color: yellow
+                             }
+                   div{
+                                border: solid black 1px;
+                                width: 160px;
+                                padding: 4px
+                         }
+                   input{
+                                width: 50px
+                             }
+         </style>
+         <script></script>
+     </head>
+    <body>
+<br><br>
+        <div>
+            <input id="high" title="exit"></input>
+            <label for="high">high</label><br><br>
+            <input id="low" title="enter"></input>
+            <label for="low">low</label><br><br>
+            <input id="base" title="investment"></input>
+            <label for="base">base</label>
+            <p id="results" title="results"></p>
+            <button>click me</button>
+          </div>
+         <script>
+
+                function gain(in1,out1,princ1){
+                                                                  let ans = (out1-in1)*princ1
+                                                                  return ans
+                                                             }
+                function disp1(content1){
+                                                      const tgtDisp1 = document.getElementById('results')
+                                                      tgtDisp1.innerHTML = content1.increase + " ups  (" + content1.percent +" %)"
+                                                             }
+                function action1(){
+                                                      //const out1 = document.querySelector('high').value
+                                                      const out1 = document.getElementById('high').value
+                                                      alert(out1)
+                                                      //const in1 = document.querySelector('low').value
+                                                      const in1 = document.getElementById('low').value
+                                                      //const princ1 = document.querySelector('base').value
+                                                      const princ1 = document.getElementById('base').value
+                                                      ans = gain(in1, out1, princ1)
+                                                      console.log(ans)
+                                                      disp1({'increase':ans.toFixed(2),'percent':(out1/in1).toFixed(2)})
+
+                                              }
+                
+                document.querySelector('button').addEventListener('click', action1)
+
+           </script>
+     </body>
+</html>
